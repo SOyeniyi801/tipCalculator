@@ -5,35 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap" rel="stylesheet">
     <title>How much you tryna tip?</title>
 </head>
 <body>
     <h2>How much you tryna tip?</h2>
-    <h4>a tip calculator when you don't know how much to tip</h4>
+    <h4 class="font">a tip calculator when you don't know how much to tip</h4>
 
-    <label for="billAmount">How much is the bill?</label><br><span>$</span>
-  <input type="text" id="billAmount" name="billAmount" placeholder="00.00"><br>
-
-  <span>How many people are at the table?</span>
-  <div class="slidecontainer">
-    <input type="range" min="1" max="25" value="5" class="slider" id="slideRange">
-  </div>
+    <label for="billAmount" class="font">How much is the bill?</label><br><span>$</span>
+  <input type="text" id="initialBillAmount" name="billAmount" placeholder="00.00"><br>
+<div class="peopleCount">
+    <span class="font">How many people are at the table?</span>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="25" value="5" class="slider" id="slideRange">
+      <span id="totalPeople" class="font"></span>
+    </div>
+</div>
+ 
 
 <div class='percentageContainer'>
-    <span>What percentage would you like to tip?</span>
-    <div class="percentageButtons">
-        <button>10%</button>
-        <button>15%</button>
-        <button>20%</button>
-        <button>25%</button>
-    </div> 
+    <span class="font">What percentage would you like to tip?</span>
+    <div class='movePercents'>
+        <div class="percentageButtons" id="tipPercentage">
+            <button>10%</button>
+            <button>15%</button>
+            <button>20%</button>
+            <button>25%</button>
+        </div> 
+    </div>
+    
 </div>
-  
+<div class="submitBox">
+    <button class="submitButton" >Tell me how much</button>
+</div>
 <div class="totalsOutput">
-    <span id="tipAmout">Your tip amount is:</span> <br>
-    <span id="totalBillAmount">Your bill total is:</span> <br>
+    <span id="tipAmout">Your tip amount is:</span> 
+    <span id="totalBillAmount">Your bill total is:</span> 
     <span id="pricePerPerson">Each person pays:</span>
 </div>
-  
+  <script src="main.js"></script>
 </body>
 </html>
