@@ -26,19 +26,20 @@
  
 
 <div class='percentageContainer'>
-    <span class="font">What percentage would you like to tip?</span>
-    <div class='movePercents'>
-        <div class="percentageButtons" id="tipPercentage">
-            <button>10%</button>
-            <button>15%</button>
-            <button>20%</button>
-            <button>25%</button>
-        </div> 
-    </div>
+        <label for="percentage" class="font">What percentage would you like to tip?</label>
+    <select name="percentage" id="tipPercent" class="font">
+        <option value="0">Please Select an Option</option>
+        <option value=".1">10%</option>
+        <option value="0.15">15%</option>
+        <option value="0.20">20%</option>
+        <option value="0.25">25%</option>
+    </select>
     
+     
 </div>
+    
 <div class="submitBox">
-    <button class="submitButton" >Tell me how much</button>
+    <button onclick="calculateTip()" >Tell me how much</button>
 </div>
 <div class="totalsOutput">
     <span id="tipAmout">Your tip amount is:</span> 

@@ -15,31 +15,22 @@ h2{
 
 .percentageContainer{
     margin-top: 30px;
-}
-.percentageButtons{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    position: absolute;
-    border-radius: 5px;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-    margin-top: 10px;
-    
-}
-.movePercents{
     display: flex;
-    margin-left: 45%;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 30%;
 }
 
+
 button {
-    height: 50px;
-    border-radius: 100%;
     border: 1px solid #c4c4c4;
     background-color: transparent;
     font-size: 15px;
-    width: 50px;
     font-family: 'Oswald', sans-serif;
     font-weight: bolder;
+    width: 150px;
+    height: 50px;
+    border-radius: 0%;
   }
 
   button:hover{
@@ -78,16 +69,10 @@ button {
   }
 
   .submitBox{
-      margin-top: 12%;
+      margin-top: 3%;
       display: flex;
       justify-content: center;
   }
-  .submitButton{
-    width: 150px;
-    height: 50px;
-    border-radius: 0%;
-  }
-  
 
   .totalsOutput{
       display: flex;
