@@ -9,28 +9,32 @@ slider.oninput = function() {
 // document.getElementById('initialBillAmount').value.onchange = function(){
 //     console.log(value)
 // }
+let tipPercentage = 0;
+function tipValue(event){
+    tipPercentage = parseFloat(event.target.value)
+    // event.target.classList.add('')
+    // document.getElementsByClassName('selected')[0].classList.remove('selected')
+    console.log(tipPercentage)
+}
+
+
 
 let calculateTip = (() => {
-    let billAmount = document.getElementById('initialBillAmount').value
+    let billAmount = parseFloat(document.getElementById('initialBillAmount').value)
     let amountOfPeople = slider.value
-    let tipPercentage = document.getElementById('tipPercent').value
+    
 
-    // Thought this would take tip percentage value and do math on click 
-    // if(tipPercentage === .1){
-    //     return billAmount *= .1
-    // }else if(tipPercentage === 0.15){
-    //     return billAmount *= .15
-    // }else if(tipPercentage === 0.20){
-    //     return billAmount *= .20
-    // } else if(tipPercentage === 0.25){
-    //     return billAmount *= .20
-    // }else{
-    //     return "error"
-    // }
+    let tipAmount = parseFloat((billAmount*tipPercentage).toFixed(2))
+    billAmount += tipAmount
+    let pricePerPerson = parseFloat((billAmount/amountOfPeople).toFixed(2))
+    console.log(pricePerPerson)
+
+    document.getElementById('tipAmount').innerText = `Your tip amount is: $${tipAmount}`
+    document.getElementById('totalBillAmount').innerText = `Your bill total is: $${billAmount}`
+    document.getElementById('pricePerPerson').innerText = `Each person pays: $${pricePerPerson}`
 
     console.log(billAmount,amountOfPeople,tipPercentage)
           
 })
-// console.log(calculateTip())
 
 
