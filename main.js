@@ -6,15 +6,14 @@ slider.oninput = function() {
   output.innerHTML = this.value;
 }
 
-// document.getElementById('initialBillAmount').value.onchange = function(){
-//     console.log(value)
-// }
 let tipPercentage = 0;
 function tipValue(event){
     tipPercentage = parseFloat(event.target.value)
-    // event.target.classList.add('')
-    // document.getElementsByClassName('selected')[0].classList.remove('selected')
-    console.log(tipPercentage)
+    event.target.classList.add('buttonHighlight')
+    // document.getElementsByClassName('buttonHighlight')[0].classList.remove('buttonHighlight')
+    document.querySelector('button')[0].classList.remove('buttonHighlight')
+
+    // console.log(tipPercentage)
 }
 
 
